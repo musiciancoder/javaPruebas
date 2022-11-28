@@ -1,6 +1,6 @@
 package hilos;
 
-public class Proceso extends Thread {
+public class Proceso extends Thread { //Thread implementa a la interfaz runnable
 	
 
 	
@@ -19,14 +19,14 @@ public class Proceso extends Thread {
 	
 	public void run() {
 		
-		for (int i = 0; i < 20; i++) {
+		//for (int i = 0; i < 20; i++) {
 			
 		System.out.println(this.getName()); //getName retorna el nombre del thread
 		//System.out.println(this.mensaje);  //da null
 			System.out.println(this.getId());
 			System.out.println(this.hashCode());
 		
-		}
+
 	}
 
 }

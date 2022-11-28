@@ -5,14 +5,26 @@ public class IntegerInt {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+
+				System.out.println(10 + 20 + "Javatpoint");
+				System.out.println("Javatpoint" + 10 + 20);
+
+
 		int int1 = 70;
 		
 		int int2= 80;
 		
 		int int3 = int1 + int2;
-		
-		//String str1 = int1; //no es posible pasar de int a String
-		
+
+		String mystr= ((Integer) int3).toString();//forma 1
+
+		String mystrtwo= 	String.valueOf(int3);//forma2
+
+
+		System.out.println("mystr: " + mystr);
+
+		System.out.println("mystrtwo: " +mystrtwo);
+
 		System.out.println(int3);
 		
 		Integer Int2 = 70;
@@ -74,7 +86,7 @@ public class IntegerInt {
 	      System.out.println(str9);
 	      
 	     
-	      // StringBuffer sí esta sincronizada y es menos eficiente
+	      // StringBuffer sï¿½ esta sincronizada y es menos eficiente
 	      
 	      StringBuffer sb = new StringBuffer();
 	      for(int i = 0; i < arr1.length; i++) {

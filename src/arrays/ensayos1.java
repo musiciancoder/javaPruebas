@@ -3,7 +3,9 @@ package arrays;
 
 
 public class ensayos1 {
+	
 
+	
 	public static void main(String[] args) {
 		
 		boolean contieneHigos = true;
