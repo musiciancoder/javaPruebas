@@ -29,12 +29,13 @@ public enum UsosTallas {
     }
 
     public static void main (String[] args){
-        System.out.println(UsosTallas.TALLA_PEQUENA);
+        System.out.println(TALLA_PEQUENA); //TALLA_PEQUENA
+        System.out.println(TALLA_PEQUENA.getClass()); //class mienum.UsosTallas
         String talla= UsosTallas.TALLA_PEQUENA.toString();
         UsosTallas la_talla=Enum.valueOf(UsosTallas.class,talla);
-        System.out.println("Talla: " + la_talla);
-        System.out.println("Abreviatura: " + la_talla.getMiabreviatura());
-        System.out.println("Abreviatura:" + UsosTallas.TALLA_PEQUENA.getMiabreviatura());
+        System.out.println("Talla: " + la_talla);//Talla: TALLA_PEQUENA
+        System.out.println("Abreviatura: " + la_talla.getMiabreviatura());// Abreviatura: S
+        System.out.println("Abreviatura:" + UsosTallas.TALLA_PEQUENA.getMiabreviatura());//Abreviatura: S
 
     }
 }

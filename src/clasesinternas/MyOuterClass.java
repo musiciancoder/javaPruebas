@@ -54,12 +54,12 @@ public class MyOuterClass {
 
     public static void main(String[] args) {
         StaticPublicInnerClass staticPublicInnerClass = new StaticPublicInnerClass();
-        staticPublicInnerClass.imprimeStaticPublicInnerClass();
+        staticPublicInnerClass.imprimeStaticPublicInnerClass(); //notar que al hacer la clase interna estatica no dependemos de la clase externa
         StaticPrivateInnerClass staticPrivateInnerClass = new StaticPrivateInnerClass();
-        staticPrivateInnerClass.imprimeStaticPrivateInnerClass();
+        staticPrivateInnerClass.imprimeStaticPrivateInnerClass(); //notar que al hacer la clase interna estatica no dependemos de la clase externa
         MyOuterClass myOuterClassOne = new MyOuterClass("Andres",44);
        // InnerClassOne innerClassOne = new InnerClassOne("Ingeniero"); // no se pueden referenciar clases internas no estaticas desde un metodo estatico
-        MyOuterClass.InnerClassOne myInner = myOuterClassOne.new InnerClassOne("Ingeniero");
+        MyOuterClass.InnerClassOne myInner = myOuterClassOne.new InnerClassOne("Ingeniero");  //notar que al hacer la clase interna no estatica, entonce sí dependemos de la clase externa
         System.out.println(myOuterClassOne.toString()+" "+myInner.toString());
     }
 

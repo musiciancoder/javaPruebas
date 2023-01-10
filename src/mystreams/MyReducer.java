@@ -10,8 +10,12 @@ public class MyReducer {
         gastos.add(200);
         gastos.add(300);
 
-        gastos.stream().reduce((acumulador,numero)-> {
-            return acumulador+numero;
+        gastos.
+                stream().
+                reduce((acumulador,numero)-> {
+                    int sumaParcial = acumulador + numero;
+                    System.out.println("Suma Parcial: " + sumaParcial);
+            return sumaParcial;
         }).ifPresent(System.out::println);
 
         //gastos.stream().reduce(Integer::sum).ifPresent(System.out::println); mas simple
