@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="miconfiguracioncuatro" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="exportarconfiguracion.MainMiConf" />
+    <module name="PruebasGeneralesJava" />
+    <option name="PROGRAM_PARAMETERS" value="leleulu" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="exportarconfiguracion.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

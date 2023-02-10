@@ -8,6 +8,8 @@ public class Auto {
     private String color;
     private static double descuento;
 
+    private static int bloque;
+
     //notar q en el argumento del constuctor no va la variable estatica, porque es comun a todos los elementos de la clase
     public Auto(String patente, String marca, double precio, String color) {
         this.patente = patente;
@@ -18,6 +20,7 @@ public class Auto {
     }
 
     public double precioPromocional(){
+        System.out.println("soy metodo NO estatico precioPromocional"); //para demostrar que a diferencia de un bloque estático, los metodos estáticos no necesariamente se ejecutan primero que los métodos NO estáticos.
         this.pruebaMetodoNoStatic();//En método no static se puede llamar otro metodo no static sin problemas con this
         this.pruebaMetodoStatic();////En método no static se puede llamar otro metodo static sin problemas con this
         Auto myAuto = new Auto("GDGFG4","Citroen", 237,"negro");
@@ -27,6 +30,7 @@ public class Auto {
     }
 
     public static void anularDescuento(){
+        System.out.println("soy metodo estatico anularDescuento"); //para demostrar que a diferencia de un bloque estático, los metodos estáticos no necesariamente se ejecutan primero que los métodos NO estáticos.
         Auto.descuento=0;
        // this.pruebaMetodoNoStatic();//En método static NO se puede llamar otro metodo no static sin problemas con this
         //this.pruebaMetodoStatic();////En método static NO se puede llamar otro metodo static sin problemas con this
@@ -53,6 +57,11 @@ public class Auto {
 
     public void pruebaMetodoNoStatic (){
         System.out.println("Soy metodo No Static");
+    }
+
+    static {
+        bloque=30;
+        System.out.println("bloque: " + bloque ); //para demostrar que los bloques estáticos se ejecutan primero q nada, incluso primero q el constructor
     }
 }
 
