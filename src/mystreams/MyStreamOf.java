@@ -19,6 +19,7 @@ public class MyStreamOf {
         stream.forEach(s -> System.out.println(s));
 
 
+
         System.out.println("Using double colon ::");
         // Get the stream
         Stream<String> streamTwo

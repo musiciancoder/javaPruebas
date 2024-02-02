@@ -9,6 +9,7 @@ public class Video {
     private int time;
     private int likes;
     private int views;
+    private Category category;
 
 
     public  double getNumberOfHoursPlayed(){
@@ -16,7 +17,7 @@ public class Video {
     }
 
     enum Category { //con el @Data tb creamos getter y setter para Category
-        GAMING, EDUCATIONAL, ENTERTAINMENT
+        GAMING, EDUCATIONAL, ENTERTAINMENT //aqui sí podria ir otra categoría, como SPORTS por ejemplo, que indicaría si es futbol, basquetball, etc.
     }
 
 

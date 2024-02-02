@@ -10,5 +10,9 @@ public class MyFilter {
         Personas.stream()
                 .filter(persona->persona.equals("Edgardo"))
                 .forEach(System.out::println);
+
+        Personas.stream()
+                .filter((persona->!persona.equals("Edgardo")))
+                .forEach(System.out::println);
     }
 }

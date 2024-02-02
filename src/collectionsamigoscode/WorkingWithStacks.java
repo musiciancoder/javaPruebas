@@ -2,7 +2,7 @@ package collectionsamigoscode;
 
 /*
 The Stack class represennts a last-in-first-out (LIFO) stack of objects. Works as a box of pringles
-It is syncronized, which Arraylists are not.
+It is syncronized, which means they are thread safe. Arraylists and linkedlist are not syncrchonized.
 It extends class Vector with five operations that allow a vector to be treated as a stack
 The usual pusk and pop operations are provided as well as a method to peek at the top item on the stack,
 a method to test for wheater the stack is empty

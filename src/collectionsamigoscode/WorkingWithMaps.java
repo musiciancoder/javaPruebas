@@ -16,7 +16,7 @@ public class WorkingWithMaps {
 
     public static void main(String[] args) {
 
-        Map<Integer, Persono> map = new HashMap<>();
+        Map<Integer, Persono> map = new HashMap<>(); //default initial capacity = 16
         map.put(1, new Persono("Alex"));
         map.put(2, new Persono("Alex"));
         map.put(3, new Persono("Mariam"));

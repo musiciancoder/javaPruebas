@@ -1,37 +1,35 @@
 package solid.liskovprinciple;
 
 /*
-
+According to LSP subtypes must be substitutable for supertype. The main concept behind LSP SOLID design principle is that derived class or subclass must enhance functionality not reduce.
 Notar que al realizar polimorfismo no siempre el principio de Liskov se cumple, como en este caso, por ejemplo
  */
 
 public class mispruebas {
 
     public static void main(String[] args) {
-        Integer[] array = { 1,2,3 };
-        Object[] arrayObjects = array;
+
 
         //Integer[] es sub-tipo de Object[]
-        //¿es seguro?
 
-      //  arrayObjects[0] = "Hola"; //falla, por lo que no se cumple Liskov
-        arrayObjects[0] = 0; //no falla
-        System.out.println(arrayObjects[0]);
 
-        Object [] objectsSinPolimorfismo;
+        Object [] objectsPolimorfismOut;
 
-        Object[] objectsConPolimorfismo;
+        Object[] objectsPolimorfismIn;
 
-        objectsSinPolimorfismo = new Object[]{4,5,6};
+        objectsPolimorfismOut = new Object[]{4,5,6};
 
-        objectsConPolimorfismo = new Integer []{4,5,6};
+        objectsPolimorfismIn = new Integer []{4,5,6};
 
-        objectsSinPolimorfismo[0] = "str";
+        objectsPolimorfismOut[0]=8;
 
-  //      objectsConPolimorgismo[0] = "str"; falla
 
-        System.out.println(objectsSinPolimorfismo[0]);
-   //     System.out.println(objectsConPolimorgismo[0]); falla
+        Object myObject;
+        myObject = "object";
+        objectsPolimorfismIn[0]=myObject; //fails to store an element of superclass as if an element of the subclass
+
+        System.out.println("Polimorphism in: "+objectsPolimorfismOut[0]);
+        System.out.println("Polimorphism out: "+ objectsPolimorfismIn); //fail
 
 
 

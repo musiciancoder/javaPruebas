@@ -1,0 +1,7 @@
+Obtener ejemplo de aqui: https://www.javatpoint.com/dto-java
+El ejemplo de Baeldung me pareció confuso porque manejan bastantes DTOs Y NO LO ENTENDÍ.
+Este no es un patrón de diseño clásico. En algunas fuentes se refieren a él sólo como patrón y en otras como patrón de diseño, pero en ninguna fuente sale q sea creacional, estructural o de comportamiento.
+Básicamente consiste en crear POJOs con atributos pertenecientes originalmente a clases de modelo o de entidades q son escojidos para la ocasión (a lo cherry picking).
+Con esto se logra mayor portabilidad (porque se prescinde de los atributos que no estamos usando) por lo que se usa normalmente para recibir o pasar data desde o a peticiones http que tienen una gran cantidad de atributos o bien por ejemplo cuando no queremos exponer en la respuesta informacion de seguridad de un usuario sino
+q queremos pasar por ejemplo solo el nombre del usuario (no la contraseña) y datos de contacto.
+Normalmente el controller o el servicio o ambos actúan como 'mapper', o sea un intermediario que contiene lógica que relaciona los dto con las clases de modelo ('domain model') o entidades en la base de datos

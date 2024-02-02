@@ -1,6 +1,7 @@
 package herencia.palabradefault;
 
 public interface miinterface {
+
     void methodOne();
     default void methodTwo(){ //If never overriden, this is default behaviour.
         System.out.println("Im methodTwo");

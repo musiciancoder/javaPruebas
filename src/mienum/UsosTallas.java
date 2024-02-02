@@ -8,6 +8,8 @@ An enum cannot be used to create objects, and it cannot extend other classes (bu
 
 Why And When To Use Enums?
 Use enums when you have values that you know aren't going to change, like month days, days, colors,
+Java enums are automatically Serializable, there is no need to explicitly add the "implements Serializable" clause following the enum declaration.
+Enums are thread safe
  */
 
 public enum UsosTallas {

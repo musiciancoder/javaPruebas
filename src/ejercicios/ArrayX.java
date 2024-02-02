@@ -1,15 +1,17 @@
 package ejercicios;
 
+import java.util.Scanner;
+
 public class ArrayX {
 
     public static void main(String[] args) {
 
-
-        int dimension = 20;
+Scanner scan = new Scanner(System.in);
+        int dimension = scan.nextInt();
         String[][] myArr = new String[dimension][dimension];
 
         for (int i = 0; i < dimension; i++) {
-            System.out.println();
+
             for (int j = 0; j < dimension; j++) {
                 if (i == j) {
                     myArr[i][j] = "x";
@@ -19,7 +21,7 @@ public class ArrayX {
                     myArr[i][j] = " ";
                 System.out.print(myArr[i][j] + " ");
             }
-
+            System.out.println();
         }
 
     }

@@ -2,7 +2,7 @@ package patronesdiseno.estructurales.adapter;
 
 import java.util.Random;
 
-public class EnemyTank implements EnemyAttacker{
+public class EnemyTank implements EnemyAttacker{ //this class do not need an adaper, since methods from EnemyAttacker are well suited.
 
     Random generator = new Random();
     @Override

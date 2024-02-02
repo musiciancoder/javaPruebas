@@ -26,6 +26,8 @@ public class Auto {
         Auto myAuto = new Auto("GDGFG4","Citroen", 237,"negro");
         myAuto.pruebaMetodoNoStatic();
         myAuto.pruebaMetodoStatic();
+        Auto.pruebaMetodoStatic(); //Sin problemas se puede llamar a un metodo estatico desde un metodo no estatico con el nombre de la clase
+
         return this.precio-this.precio*(Auto.descuento)/100;
     }
 
@@ -34,9 +36,11 @@ public class Auto {
         Auto.descuento=0;
        // this.pruebaMetodoNoStatic();//En método static NO se puede llamar otro metodo no static sin problemas con this
         //this.pruebaMetodoStatic();////En método static NO se puede llamar otro metodo static sin problemas con this
+        Auto.pruebaMetodoStatic();
         Auto myAuto = new Auto("GDGFG4","Citroen", 237,"negro");
         myAuto.pruebaMetodoNoStatic();
         myAuto.pruebaMetodoStatic();
+        Auto.pruebaMetodoStatic(); //Sin problemas se puede llamar a un metodo estatico desde un metodo no estatico con el nombre de la clase
         // this.precio =this.precio - Auto.descuento; //El uso del this esta prohibido en metodos estaticos!!
     }
 

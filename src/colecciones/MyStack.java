@@ -21,8 +21,9 @@ public class MyStack {
         System.out.println(myVector);
 
         System.out.println(myVector.capacity());
-        myVector.remove(1);
-        System.out.println(myVector.get(1));
+        System.out.println("before..." + myVector.get(0));
+        myVector.remove(0);
+        System.out.println("after..." +myVector.get(0));
         System.out.println(myVector.size());
 
         myVector.add("Claudito");
@@ -32,7 +33,7 @@ public class MyStack {
        Stack mystack = (Stack) myVector;
 
         myVector.add("Lee");
-        System.out.println(mystack.peek()); //first in first out
+        System.out.println("Im peeking..." + mystack.peek()); //first in last out
 
         System.out.println( mystack.getClass());
         System.out.println(myVector.getClass());
