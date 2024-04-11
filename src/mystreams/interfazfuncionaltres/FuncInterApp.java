@@ -5,12 +5,14 @@ import mystreams.interfazfuncional.Operacion;
 public class FuncInterApp implements OperacionTres {
 
     public double operar(double x, double y){
-        OperacionTres op = (n1, n2) ->n1+n2; //notar que para ocupar OperacionTres (metodo abstracto) no estamos obligados a implementar OperacionTres...
-        return op.calcular(x,y);
+        OperacionTres op = (n1, n2) ->n1+n2;
+        return op.calcular(x,y);  //notar que para ocupar calcular() (metodo abstracto) no estamos obligados a implementar OperacionTres...
     }
 
     //...pero para hacer uso de los metodos no abstractos (los q llevan default), si debemos implementar OperacionTres
-    @Override
+
+
+    @Override //...y notar que ya que estamos implementando OperacionTres (con el fin de ocupar calcularTres y calcularCuatro), nos obliga a implementar el método calcular() que originalmente habiamosdefinido como funcional
     public double calcular(double n1, double n2) {
         return 0;
     }

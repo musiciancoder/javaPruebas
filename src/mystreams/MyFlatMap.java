@@ -1,6 +1,7 @@
 package mystreams;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class MyFlatMap {
 
@@ -8,7 +9,7 @@ public class MyFlatMap {
 
        List <String> phonenumbers1 = Arrays.asList("455","767676");
        List <String> phonenumbers2 = Arrays.asList("455566","7676767776");
-        List <String> phonenumbers3 = Arrays.asList("6565667","7676767778");
+       List <String> phonenumbers3 = Arrays.asList("455","7676767778");
 
 
         List <User> users = new ArrayList<>();
@@ -30,13 +31,14 @@ if (stringOptional.isPresent())
 }*/
 
         //SINTAXIS 2 (recomendada)
-       Optional<String> stringOptional =  users.stream()
-                .map(user->user.getPhonenumber())
-                .flatMap(phonenumber->phonenumber.stream())
-                .filter(phonenumber->phonenumber.equals("455"))
-                .findAny();
+       List<String> listOfUsers =  users.stream()
+                .map(user->user.getPhonenumbers())//phoneNumbers es lista de listas de numeros
+                .peek(phonenumbers-> System.out.println("list of phonenumbers: "+phonenumbers))
+                .flatMap(phonenumber->phonenumber.stream())//phonenumber es lista de numero
+               .peek(p -> System.out.println("phonenumber: " + p))
+                .filter(phonenumber->phonenumber.equals("455")).collect(Collectors.toList());
 
-        stringOptional.ifPresent(System.out::println);
+        System.out.println(listOfUsers);
 
         //SINTAXIS 3
      /*   Optional<String> stringOptional =  users.stream()
@@ -53,12 +55,12 @@ if (stringOptional.isPresent())
     static class User {
         private String name;
         private Integer age;
-        private List <String> phonenumber;
+        private List <String> phonenumbers;
 
-        public User(String name, Integer age, List<String> phonenumber) {
+        public User(String name, Integer age, List<String> phonenumbers) {
             this.name = name;
             this.age = age;
-            this.phonenumber = phonenumber;
+            this.phonenumbers = phonenumbers;
         }
 
         public String getName() {
@@ -77,12 +79,12 @@ if (stringOptional.isPresent())
             this.age = age;
         }
 
-        public List<String> getPhonenumber() {
-            return phonenumber;
+        public List<String> getPhonenumbers() {
+            return phonenumbers;
         }
 
-        public void setPhonenumber(List<String> phonenumber) {
-            this.phonenumber = phonenumber;
+        public void setPhonenumbers(List<String> phonenumbers) {
+            this.phonenumbers = phonenumbers;
         }
     }
 }

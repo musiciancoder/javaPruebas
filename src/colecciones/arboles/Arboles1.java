@@ -18,7 +18,7 @@ public class Arboles1 {
 
         TreeSet <Articulo>arbol2  = new TreeSet <Articulo>();
         System.out.println(arbol2);
-        System.out.println("");
+        System.out.println("comparados por numero de articulo");
 
         arbol2.add(new Articulo(1,"primer articulo"));
         arbol2.add(new Articulo(200,"segundo articulo"));
@@ -26,27 +26,28 @@ public class Arboles1 {
 
         System.out.println(arbol2);
 
-        System.out.println("");
+        System.out.println(" ");
 
        Articulo comparadorArticulos = new Articulo();
 
         System.out.println(comparadorArticulos);
 
-        System.out.println("");
+        System.out.println(" ");
 
        TreeSet<Articulo>ordenaArticulos2=new TreeSet<Articulo>(comparadorArticulos); //TODO ¿POR QUÉ NECESITA INICIALIZARLO COMO CONSTRUCTOR VACÍO PARA QUE LE FUNCIONE EL COMPARE?
 
         System.out.println(ordenaArticulos2);
 
-        System.out.println("");
+        System.out.println(" ");
 
         ordenaArticulos2.add(new Articulo(1,"primer articulo"));
         ordenaArticulos2.add(new Articulo(200,"segundo articulo"));
         ordenaArticulos2.add(new Articulo(3,"tercer articulo"));
 
+        System.out.println("ordenados por descripcion, no por numero");
         System.out.println(ordenaArticulos2);
 
-        System.out.println("");
+        System.out.println(" ");
 
         ComparadorArticulos comp_art = new ComparadorArticulos();
 
@@ -57,9 +58,11 @@ public class Arboles1 {
         ordenaArticulos3.add(new Articulo2(200,"segundo articulo"));
         ordenaArticulos3.add(new Articulo2(3,"tercer articulo"));
 
-        System.out.println(ordenaArticulos3);
+        System.out.println("ordenados por descripcion, no por numero");
 
-        System.out.println("");
+        System.out.println(ordenaArticulos3); //ordenados por descripcion, no por numero
+
+
     }
 
 

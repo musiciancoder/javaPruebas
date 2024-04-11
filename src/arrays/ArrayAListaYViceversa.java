@@ -19,6 +19,14 @@ public class ArrayAListaYViceversa {
             //list.remove(it.next()); //Da error con listas inmutables!!
         }
 
+
+        String[] array = new String[list.size()];
+        list.toArray(array); // fill the array
+        for (String p:
+            array ) {
+            System.out.println("Array element: " + p);
+        }
+
         String[] arr2 = new String[]{"naranja", "violeta", "blanco"};
         List<String> list2 = new ArrayList<>(Arrays.asList(arr2));
         Iterator<String> it2 = list2.iterator();
@@ -34,15 +42,19 @@ public class ArrayAListaYViceversa {
 
         }
 
-        List<String>list3 = new LinkedList<>();
+        List<String>list3 = new LinkedList<>(); //linkedlist funciona igual
         list3.add("cafe");
         list3.add("negro");
 
         Iterator<String> it3= list3.iterator();
 
-        while (it.hasNext()){
+        while (it3.hasNext()){
             list3.remove(it3.next());
             System.out.println(list3.size());
         }
     }
+
+
+
+
 }

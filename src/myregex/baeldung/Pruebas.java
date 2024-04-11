@@ -106,7 +106,7 @@ public class Pruebas {
 
     @Test
     public void givenTwoSets_whenMatchesUnion_thenCorrect() {
-        int matches = runTest("[1-3[7-9]]", "123456789"); //del 1 al 3 ó del 7 al 9
+        int matches = runTest("[1-3[7-9]]", "6"); //del 1 al 3 ó del 7 al 9
 
         assertEquals(matches, 6);
     }

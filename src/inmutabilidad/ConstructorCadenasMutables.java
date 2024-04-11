@@ -14,8 +14,9 @@ public class ConstructorCadenasMutables {
         System.out.println("");
 
         //Note that after a switch in object x, to the same atributes as y, object x  still has the same hashcode as before (it does not swaps to hashcode of object y). The exact opposite to this occurs when using Sting instead of StringBuilder.
-        System.out.println("After swapping:");
+
         x.replace(0,5,"second");
+        System.out.println("After swapping:");
         System.out.println("x: " + x + " ; y: " + y);
         System.out.println("hashcode x: " + x.hashCode() + " ; hashcode y: " + y.hashCode());
 

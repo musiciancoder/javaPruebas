@@ -18,7 +18,7 @@ public class ReflectionTutorial {
         Cat myCat = new Cat("Stella",6);
 
         //myCat.setName("chica"); //!!!no podemos hacer esto
-        Field[] catFields= myCat.getClass().getDeclaredFields();
+        Field[] catFields= myCat.getClass().getDeclaredFields(); //con clase Field recuperamos reflectivamente los campos de clase
         for (Field field:catFields) {
             System.out.println(field.getName());
             if (field.getName().equals("name")){
@@ -29,7 +29,7 @@ public class ReflectionTutorial {
         }
 
         //  myCat.heyThisIsPrivate(); // !!!no podemos hacer esto
-        Method[] catMethods = myCat.getClass().getDeclaredMethods();
+        Method[] catMethods = myCat.getClass().getDeclaredMethods(); //con clase Method recuperamos reflectivamente los metodos de clase
         // notar q con esto el programa no se cae
         for (Method method:catMethods
              ) {
