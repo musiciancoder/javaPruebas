@@ -15,6 +15,8 @@ public class FuncInterApp { //notar que para q una Functional Interface funcione
     }
 
 
+
+
     public static void main(String[] args) {
         FuncInterApp app = new FuncInterApp();
         double rpta = app.operar(2,3);

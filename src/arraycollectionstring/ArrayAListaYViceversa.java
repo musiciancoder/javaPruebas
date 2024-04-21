@@ -1,4 +1,4 @@
-package arrays;
+package arraycollectionstring;
 
 import java.util.*;
 
@@ -7,21 +7,39 @@ public class ArrayAListaYViceversa {
     public static void main(String[] args) {
 
 
-        String[] arr = new String[]{"azul", "rojo", "verde", "amarillo"};
-        List list = Arrays.asList(arr); //Esto crea una lista inmutable. NO ES ACONSEJABLE!!!!!
+        String[] miarray = {"cafe","morado"};
+        List<String> lista = new ArrayList<String>(Arrays.asList(miarray)); ////Esto crea una lista mutable.
+        lista.add("celeste");
+        System.out.println(lista);
+
+
+        String[] arr = {"azul", "rojo", "verde", "amarillo"};
+        List <String>lista2 =Arrays.asList(arr); //Esto crea una lista inmutable. NO ES ACONSEJABLE!!!!!
+         //lista2.add("negro"); C
+        System.out.println(lista2);
+
+        String[] arr0 ={"blanco", "rojo", "verde", "amarillo"};
+
+
+        List <String> list0 = new ArrayList<String>();
+        list0 = Arrays.asList(arr0);
+       // list0.add("negro"); //Esto crea una lista inmutable. NO ES ACONSEJABLE!!!!!
+        System.out.println(list0);
+
+
         String str;
 
-        Iterator<Integer> it = list.iterator();
+        Iterator<String> it = lista2.iterator();
         while (it.hasNext()) {
             str = String.valueOf(it.next());
             System.out.println("El string es: " + str);
-            System.out.println("La lista es: " + list);
+            System.out.println("La lista es: " + lista2);
             //list.remove(it.next()); //Da error con listas inmutables!!
         }
 
 
-        String[] array = new String[list.size()];
-        list.toArray(array); // fill the array
+        String[] array = new String[lista2.size()];
+        lista2.toArray(array); // fill the array
         for (String p:
             array ) {
             System.out.println("Array element: " + p);
@@ -52,7 +70,16 @@ public class ArrayAListaYViceversa {
             list3.remove(it3.next());
             System.out.println(list3.size());
         }
+
+
+        //De lista a array
+        String [] myarr = list3.toArray(new String[list3.size()]);
+        for (String p:
+             myarr) {
+            System.out.println(p);
+        }
     }
+
 
 
 

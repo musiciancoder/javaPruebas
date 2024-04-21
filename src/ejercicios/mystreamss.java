@@ -67,7 +67,7 @@ class MyMath {
             String ans = null;
             while (T--> 0) {
                 String s = br.readLine().trim();
-                StringTokenizer st = new StringTokenizer(s);
+                FStringTokenizer st = new StringTokenizer(s);
                 int ch = Integer.parseInt(st.nextToken());
                 int num = Integer.parseInt(st.nextToken());
                 if (ch == 1) {

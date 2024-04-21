@@ -15,6 +15,11 @@ public class ArrayList1 {
 		mariscales.add("Davout");
 		mariscales.add("Ney");
 		mariscales.add("Davout"); //lo agrega sin problemas, con el mismo Hashcode por lo que acepta elementos repetidos
+		mariscales.add("Murat");
+		System.out.println(mariscales); // [Oudinot, Davout, Ney, Davout, Murat] por lo q las listas son first-in first-out
+
+
+
 		ListIterator<String>it=mariscales.listIterator();
 		for (String m : mariscales) {
 			System.out.println("Mariscal" + it.nextIndex()+": "+m+"; hashcode: "+m.hashCode());

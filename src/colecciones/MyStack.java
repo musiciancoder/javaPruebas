@@ -18,22 +18,29 @@ public class MyStack {
         myVector.add("Andres");
         myVector.add("Maira");
         myVector.add("Claudito");
+        myVector.add("Maira");
         System.out.println(myVector);
+        System.out.println(myVector.get(0));
 
-        System.out.println(myVector.capacity());
-        System.out.println("before..." + myVector.get(0));
-        myVector.remove(0);
-        System.out.println("after..." +myVector.get(0));
-        System.out.println(myVector.size());
+
 
         myVector.add("Claudito");
         System.out.println(myVector);
         System.out.println(myVector.size());
         System.out.println(myVector.getClass());//stack
-       Stack mystack = (Stack) myVector;
-
         myVector.add("Lee");
-        System.out.println("Im peeking..." + mystack.peek()); //first in last out
+       Stack mystack = (Stack) myVector;
+        System.out.println(mystack);
+        //es como una caja de pringles, aunque imprime en primer lugar al que entro primero
+        System.out.println("Indice 0... " + mystack.get(0)); //Andres, lo q significa q es first in first out para los indices
+        System.out.println("Im peeking..." + mystack.peek()); //Lee, lo que es last in first out para peek().
+        /*
+        empty()	boolean	The method checks the stack is empty or not.
+push(E item)	E	The method pushes (insert) an element onto the top of the stack.
+pop()	E	The method removes an element from the top of the stack and returns the same element as the value of that function.
+peek()	E	The method looks at the top element of the stack without removing it.
+search(Object o)
+         */
 
         System.out.println( mystack.getClass());
         System.out.println(myVector.getClass());

@@ -1,8 +1,8 @@
-package arrays;
+package arraycollectionstring;
 
 import java.util.Arrays;
 
-public class cadenasyarreglos {
+public class ArrayAStringYViceversa {
 
     public static void main(String[] args) {
 
@@ -14,8 +14,8 @@ public class cadenasyarreglos {
             System.out.print(" ");
         }
 
-//de array  string
-        System.out.println(" ----------------------------SEPARATOR ");
+        //De array  string
+        System.out.println(" ----------------------------SEPARATOR----------------------- ");
         String str2= Arrays.toString(arr1).replace(",", "");
         System.out.println(str2);
 

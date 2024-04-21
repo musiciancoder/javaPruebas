@@ -6,15 +6,23 @@ public class Arboles1 {
 
     public static void main(String[] args) {
 
-        //TreSet implements Set, therefore it does not take on duplicates.
+        //TreSet implements Set, therefore it does not take on duplicates. It authomaticallyhands out results in alphabetical order (Strings), ascending
+        // order (numbers) or customized order for pojos.
+        //If we want duplicated values for customized pojos we need to use PriorityQueue
         TreeSet <String>arbol1  = new TreeSet <String>();
         arbol1.add("Sandra");
         arbol1.add("Amanda");
         arbol1.add("Diana");
+        arbol1.add("Diana"); //los arboles son sets, y como tal no aceptan duplicados.
 
-        System.out.println(arbol1); //Note it returns results by alphabetical order. This is because String class implements Comparable with CompareTo method sorting in alphabetical order by default
+        System.out.println(arbol1); //Note it returns results by alphabetical order authomatically. This is because String class implements Comparable with CompareTo method sorting in alphabetical order by default
 
-        System.out.println("");
+        TreeSet <Integer>arbol0  = new TreeSet <>();
+        arbol0.add(234);
+        arbol0.add(80);
+        arbol0.add(1986);
+
+        System.out.println(arbol0); //Note it returns results in an ascending order
 
         TreeSet <Articulo>arbol2  = new TreeSet <Articulo>();
         System.out.println(arbol2);

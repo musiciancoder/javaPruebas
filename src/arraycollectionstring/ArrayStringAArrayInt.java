@@ -1,4 +1,4 @@
-package arrays;
+package arraycollectionstring;
 
 public class ArrayStringAArrayInt {
     public static void main(String[] args) {

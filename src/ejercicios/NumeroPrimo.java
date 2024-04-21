@@ -4,19 +4,28 @@ import java.util.Scanner;
 
 public class NumeroPrimo {
     public static void main(String[] args) {
+        boolean b = primo();
+        if(b) System.out.println("el numero es primo");
+        else System.out.println("el numero NO es primo");
+
+
+    }
+
+
+    static boolean primo (){
         Scanner scanner = new Scanner(System.in);
-        int num = scanner.nextInt();
+        int num = Integer.parseInt(scanner.nextLine());
         int p=2;
-        int res;
+        double res;
+        boolean b = true; //el numero es primo
         while (p<num){
             res = num%p;
-            if (res==0){
-                System.out.println(num + " no es primo");
-                return;
+            if (res==0.0) {
+                b=false;
+                break;
             }
-            p++;
-
+            else p++;
         }
-        System.out.println(num + " es primo");
+        return b;
     }
 }
