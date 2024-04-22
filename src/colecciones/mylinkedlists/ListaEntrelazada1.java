@@ -1,4 +1,4 @@
-package colecciones;
+package colecciones.mylinkedlists;
 
 import java.util.LinkedList;
 import java.util.List;

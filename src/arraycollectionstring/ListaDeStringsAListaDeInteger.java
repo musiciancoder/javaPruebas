@@ -1,9 +1,6 @@
 package arraycollectionstring;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ListaDeStringsAListaDeInteger {
@@ -18,10 +15,12 @@ public class ListaDeStringsAListaDeInteger {
             arr ) {
             System.out.println(i);
         }
-        List<String>list = listOfInteger.stream().map(l->String.valueOf(l)).collect(Collectors.toList());
+        List<String>list = listOfInteger.stream().map(l->String.valueOf(l)).collect(Collectors.toList()); //list belongs to class: class java.util.ArrayList
         System.out.println(list); //[1, 4, 9, 2, 5, 7] -->los devuelve en orden FIFO
-        Set<String> set= listOfInteger.stream().map(l->String.valueOf(l)).collect(Collectors.toSet());
-       System.out.println(set);  //[1, 2, 4, 5, 7, 9] -->los devuelve en orden cresciente
+        System.out.println("list belongs to class: " + list.getClass());
+        Set<String> set= listOfInteger.stream().map(l->String.valueOf(l)).collect(Collectors.toSet()); //set belongs to class: class java.util.HashSet
+        System.out.println(set);  //[1, 2, 4, 5, 7, 9] -->los devuelve en orden cresciente
+        System.out.println("set belongs to class: " + set.getClass());
 
     }
 }
