@@ -10,7 +10,7 @@ If you don't want to use that, the LinkedList class (http://java.sun.com/j2se/1.
 
 import java.util.*;
 
-public class ListaEntrelazada2 {
+public class LinkedListYSusMetodos {
     public static void main(String[] args) {
         LinkedList<String>list0=new LinkedList<>(); //sí acepta duplicados
         list0.add(0,"Lee");
@@ -30,8 +30,9 @@ public class ListaEntrelazada2 {
         //Diferencia entre poll() y pop(): Returning null + removing operations: poll() docs. Throwing exception + removing operations: pop()docs
         list.pop(); //saca a Adarita
         list.poll();//saca a Claudio.
-        // list.remove(); //tambien esta disponible, al igual q para arraylist. Recordar que poll() Blocks until an element becomes available for removal; remove() does not block. https://www.geeksforgeeks.org/difference-between-poll-and-remove-method-of-queue-interface-in-java/
-      //Todos los siguientes no estan disponibles en ArrayList
+       //  list.remove(3); //metodo remove con argumentos tambien esta disponible, al igual q para arraylist. Recordar que poll() Blocks until an element becomes available for removal; remove() does not block. https://www.geeksforgeeks.org/difference-between-poll-and-remove-method-of-queue-interface-in-java/
+      //   list.remove(); //metodo remove sin argumentos  esta disponible, pero solo para linkedlist porque implementa queue (arraylist no implementa Queue y por eso no lo tiene disponible)
+        //Todos los siguientes no estan disponibles en ArrayList
         //list.removeFirst;
         //list.removeLast;
        // removeFirstOccurrence(Object o);

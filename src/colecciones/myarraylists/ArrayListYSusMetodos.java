@@ -24,6 +24,7 @@ public class ArrayListYSusMetodos {
 		System.out.println(mariscales); // las listas son first-in first-out
 		System.out.println("Indice 3: " + mariscales.get(3));
 		mariscales.remove(1);
+		//mariscales.remove();//no esta disponible sin argumentos
 		System.out.println("Indice 3: " + mariscales.get(3)); //se va corriendo la lista hacia arriba
 		LinkedList<String>mariscales2 = new LinkedList<>();
 		mariscales2.add("Coulaincourt");

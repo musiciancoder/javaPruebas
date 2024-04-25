@@ -1,4 +1,4 @@
-package colecciones.colas.hackerranks;
+package colecciones.myqueues.hackerranks;
 
 import java.util.*;
 /*

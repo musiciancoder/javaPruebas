@@ -14,4 +14,19 @@ public class Main {
         acousticGuitar.descriptionOfKind();
         acousticGuitar.descriptionOfShape("jumbo");
     }
+
+    public static AcousticGuitar metodoPrueba(){
+        Guitar guitar2 = new AcousticGuitar();
+        System.out.println(guitar2 instanceof Guitar);
+        System.out.println(guitar2 instanceof AcousticGuitar);
+        return (AcousticGuitar) guitar2;
+
+        /*
+            public static AcousticGuitar metodoPrueba(){
+        Guitar guitar2 = new AcousticGuitar();
+        System.out.println(guitar2 instanceof Guitar);
+        System.out.println(guitar2 instanceof AcousticGuitar);
+        return guitar2;
+         */
+    }
 }

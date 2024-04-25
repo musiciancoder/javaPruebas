@@ -17,6 +17,7 @@ public class Arboles1 {
 
         System.out.println(arbol1); //Note it returns results by alphabetical order authomatically. This is because String class implements Comparable with CompareTo method sorting in alphabetical order by default
 
+        //arbol1.get(0);  no esta disponible porq es un set
         TreeSet <Integer>arbol0  = new TreeSet <>();
         arbol0.add(234);
         arbol0.add(80);

@@ -1,4 +1,4 @@
-package colecciones.colas;
+package colecciones.myqueues;
 
 import java.util.PriorityQueue;
 

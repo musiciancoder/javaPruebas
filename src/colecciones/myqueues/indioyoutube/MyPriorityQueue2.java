@@ -1,6 +1,5 @@
-package colecciones.colas.indioyoutube;
+package colecciones.myqueues.indioyoutube;
 
-import java.util.Iterator;
 import java.util.PriorityQueue;
 
 class Student implements Comparable<Student>{
@@ -40,14 +39,12 @@ public class MyPriorityQueue2 {
         studentQ.add(new Student("Manish",1));
         studentQ.add(new Student("Souvik",4));
         studentQ.add(new Student("Rahul",2));
-        studentQ.add(new Student("Barun",3)); //sí acepta duplicados  !!
+        studentQ.add(new Student("Barun",3)); //sí acepta valores repetidos, pero los tira al final despues de ordenar  !!
 
         System.out.println("Size of queue: " + studentQ.size());
+        System.out.println(studentQ); //[Student{rank=1, name='Manish'}, Student{rank=2, name='Rahul'}, Student{rank=3, name='Barun'}, Student{rank=5, name='Asish'}, Student{rank=4, name='Souvik'}, Student{rank=3, name='Barun'}]
 
-        Iterator<Student>it=studentQ.stream().iterator();
-        while (it.hasNext()){
-            //delete and display the first element from the queue
-            System.out.println("The item of the queue: " + studentQ.poll().toString());
+
             /*
             Resultado:
             Size of queue: 5
@@ -59,4 +56,4 @@ The item of the queue: Student{rank=5, name='Asish'}
              */
         }
     }
-}
+
