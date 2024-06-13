@@ -1,6 +1,8 @@
 package genericos;
 
-public class Box <T>{
+import java.io.Serializable;
+
+public class Box <T extends Serializable>{
 
     //Instance variable
     private T t;
@@ -21,6 +23,5 @@ public class Box <T>{
             return;
         }
         System.out.println(("The generic is NOT a String"));
-
     }
 }

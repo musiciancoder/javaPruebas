@@ -64,10 +64,10 @@ package patronesdiseno.creacionales.prototype;
         }
 
 
-        @Override
+/*        @Override
         public String toString() {
             return "id: " + this.id +" name:" + this.name + " age: " +this.age + " email: " + this.email + " password: " +this.password;
-        }
+        }*/
 
 
     }

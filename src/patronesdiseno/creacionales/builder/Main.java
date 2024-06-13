@@ -3,7 +3,7 @@ package patronesdiseno.creacionales.builder;
 public class Main {
 
     public static void main(String[] args) {
-        CarBuilder builder = new CarBuilder();
+        CarBuilder builder = new CarBuilder(); //en este patrón de diseño se llama al builder, no al constructor
         builder.id(2111);
         builder.brand("Lamborghini");
         builder.model("Countach");

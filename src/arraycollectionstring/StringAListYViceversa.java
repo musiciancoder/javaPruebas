@@ -1,9 +1,6 @@
 package arraycollectionstring;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class StringAListYViceversa {
 
@@ -26,9 +23,13 @@ public class StringAListYViceversa {
         System.out.println(list2);
 
         //de string a lista modificable
-        List<String> list3 = new ArrayList<String>(Arrays.asList(str)); //con List.of(str) en vez de Arrays.asList(str) es lo mismo, igual se puede modificar
+        List<String> list3 = new ArrayList<String>(Arrays.asList(str)); //con List.of(str) en vez de Arrays.asList(str) es lo mismo, igual se puede modificar. Mucho ojo que debe hacerse en usa sola linea, exactamente como esta aqui, sino despues no permite hacer casting para poder ocupar addFirst(), removeLast(), etc
         list3.add("Claudio"); //Sí se puede
         System.out.println(list3);
+
+        //de string a linkedlist (ideal para poder ocupar saddFirst, removeLast, etc)
+        List<String> list4 = new LinkedList<>(Arrays.asList(str.split(""))); //Mucho ojo que debe hacerse en usa sola linea, exactamente como esta aqui, sino despues no permite hacer casting para poder ocupar addFirst(), removeLast(), etc
     }
+
 
 }

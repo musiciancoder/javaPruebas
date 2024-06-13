@@ -1,0 +1,2 @@
+When we want to decouple sender of request from the object which handles the request, we use chain of responsability.
+We want this decoupling because we want to give multiple objects chance to handle the request & we dont know all of the objects before hand

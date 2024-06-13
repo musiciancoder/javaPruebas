@@ -1,0 +1,19 @@
+OBJECT IDENTITY HASHCODE VS OBJECT HASHCODE VS OBJECT REFERENCE
+
+IDENTITY HASHCODE
+Esto sale cuando no sobrescribimos el método toString() en una clase que estamos creando, entonces va a salir el Identity HashCode" separado por el caracter @.
+Casi siempre representa la direccion en memoria inicial de un objeto, sin embargo el objeto puede ser movido en memoria por la JVM, por lo que a grandes rasgos NO SE PUEDE CONFIAR QUE ESTE VALOR REPRESENTE ALGO EN JAVA.
+Es mas, conocer la direccion en memoria (se ocupan distintos terminos para esto, como memory address, memory location, y en algunos casos incorrectamente mmory reference) de un objeto no tiene sentido en java, ya que la JVM las cambia constantemente debido al garbage collector!!.
+
+OBJECT HASHCODE.
+Es el numero de serie de un objeto y no cambia en el tiempo. No tiene que ver con la referencia en memoria.
+
+OBJECT REFERENCE
+En algunos casos coincide con la dirección en memoria y en otros "representa algo mas complicado" (https://www.youtube.com/watch?v=9pR0iLjHbYI), dependiendo de lo que haga la JVM.
+En java cuando definimos Robot robotVar = new Robot(); en realidad estamos definiendo que robotVar = referencia en memoria 0X001010
+y en memoria el objeto estará marcado con la referencia 0X001010, ya que en java NO existen las variables para objetos, solo existen las variables para referencias a objetos,
+por lo que las referencia de un objeto es un "pointer" para unir el nombre de la variable y el objeto mismo.
+
+
+
+

@@ -1,0 +1,5 @@
+La razón de la necesidad de ocupar Bridge q se da en este curso no se relaciona totalmente con la razon que se da en patrones2 (Cuando una interfaz (VendedorOnline) ya desarrollada nos percatamos posteriormente que debe ser subdividida (VendedorOnLineEmpresas) y no deseamos mofificar la interfaz original).
+Sin embargo, es constante en ambos tutos (el de este curso y en el del catalán) el hecho que la abstraccion muchas veces no deseamos que se modifique y entonces se usa el bridge, para
+lo cual modificamos otra interfaz (implementor), la que metemos por composicion en la refined abstraction que hereda de la abstraction.
+Por otra parte, ambos tutos difieren en que en este curso (en seccion pitfall y en comparison with adapter) se señala q el patron bridge debe ser implementado "up front", o sea sede un comienzo, lo que contradice a patrones2.
+Pienso q es mejor lo q se habla en este curso q en patrones2 desde todo punto de vista.

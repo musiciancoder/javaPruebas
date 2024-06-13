@@ -2,6 +2,7 @@ package mienum.otroaproach;
 
  enum Equipo //esto tambien es un enum.
 {
+
     BARSA("FC Barcelona",1), REAL_MADRID("Real Madrid",2),
     SEVILLA("Sevilla FC",4), VILLAREAL("Villareal",7);
 
@@ -21,4 +22,11 @@ package mienum.otroaproach;
         return puestoLiga;
     }
 
+}
+
+class cliente {
+    public static void main(String[] args) {
+        System.out.println(Equipo.BARSA);
+        System.out.println(Equipo.valueOf("BARSA"));
+    }
 }

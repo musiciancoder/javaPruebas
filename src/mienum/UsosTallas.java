@@ -14,7 +14,7 @@ Enums are thread safe
 
 public enum UsosTallas {
 
-        //TALLA_PEQUEÑA, MEDIANO Y GRANDE son por definicion public static y final
+        //las variables TALLA_PEQUEÑA, MEDIANO Y GRANDE al estar definidas con esta sintaxis en un ENUM son por definicion public static y final, o sea son constantes.
         TALLA_PEQUENA("S"),
         MEDIANO("M"),
         GRANDE("G"); //CONSTANTE("VARIABLE")

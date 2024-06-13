@@ -17,7 +17,7 @@ public class MyIterator {
         while (it.hasNext()){
             num = it.next();
 
-            it.remove();
+            it.remove(); //notar q con un iterador se puede modificar en cada iteracion, lo que no se puede hacer con un bloque for o foreach
             System.out.println(list);
         }
 

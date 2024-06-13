@@ -1,0 +1,5 @@
+Supongamos q tenemos un código de cliente que se comunica directamente con el móduloA (target interface) y el cliente desea una nueva funcionalidad que ya esta presente en otro móduloB (adaptee).
+Ya que el cliente está implementando el moduloA no puede acceder al moduloB. Lo que se hace entonces es construir un adapter para pasar la funcionalidad deseada desde el móduloB al móduloA.
+Esto se puede hacer de dos formas, en ambas ModuloA pasa a llamarse "target interface", moduloB pasa a llamarse "adaptee".
+1. Con class adapter donde el adaptador es una clase entera, donde se extiendo moduloA y moduloB
+2. Con object adapter, donde simplemente el adapter es un objeto. Esto es lo q el instructor recomiendo, ya que contamina menos el código.

@@ -21,6 +21,18 @@ public class EqualsIgual {
             System.out.println("w1 equals w2");
         } else System.out.println("w1 NOT equals w2");
 
+        System.out.println(man1);
+        System.out.println(man2);
+        System.out.println(man1.hashCode());
+        System.out.println(man2.hashCode());
+
+        System.out.println(" ");
+        System.out.println(w1);
+        System.out.println(w2);
+        System.out.println(w1.hashCode());
+        System.out.println(w2.hashCode());
+
+
 
         String s1 = new String("abd"); //NO RECOMENDABLE, pq aunque el equals es true, el signo igual da falso!! Este mismo comportamiento presentan los wrapper clases y enums
         String s2 = new String("abd"); //NO RECOMENDABLE, pq aunque el equals es true, el signo igual da falso!!!
@@ -78,7 +90,7 @@ class Woman {
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return this.name.hashCode();
     }
 
     @Override

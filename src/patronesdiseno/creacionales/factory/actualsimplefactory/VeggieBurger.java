@@ -1,6 +1,6 @@
 package patronesdiseno.creacionales.factory.actualsimplefactory;
 
-public class VeggieBurger implements Burger{
+public class VeggieBurger implements Burger{ //ConcreteProduct
     private final String ingredient1= "Soja meet";
     private final String ingredient2= "Tomato";
     private final String ingredient3= "Lettuce";

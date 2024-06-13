@@ -5,7 +5,7 @@ package patronesdiseno.estructurales.bridge.catalan;
  */
 public class VendedorEmpresasImpl implements VendedorOnlineEmpresas {
 
-    private TiendaImpl impl;
+    private TiendaImpl impl; //este el el bridge, ya q usa por composicion el implementor en la refined abstraction (o en este caso en una clase que hereda de la refinedabstraction VendedorOnlineEmpresas)
 
 
     public VendedorEmpresasImpl(TiendaImpl impl) {

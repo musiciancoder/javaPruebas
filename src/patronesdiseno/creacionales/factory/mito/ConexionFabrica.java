@@ -2,7 +2,7 @@ package patronesdiseno.creacionales.factory.mito;
 
 public class ConexionFabrica {
 
-    public IConexionBD getConexion (String motorSQL) {
+    public IConexionBD getConexion (String motorSQL) { //Condicionales en el Factory al igual q el ejemplo de hackerrank
         if (motorSQL==null){
             return new ConecionVacia();
         }

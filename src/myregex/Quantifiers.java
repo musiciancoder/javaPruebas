@@ -9,23 +9,13 @@ public class Quantifiers {
     //Para devolver un booleano si hay un numero determinado de ocurrencias y este numero debe ser conocido de antemano
 
 
-       //Ocurrencia de exactas tres veces para NO caracteres
+       //Ocurrencia de exactas tres veces seguidas para caracteres
         System.out.println("UNO----------------------");
-       Pattern p = Pattern.compile("\\.{3}"); //los NO caracteres (en este caso un punto es un NO caracter) para estos casos deben marcarse antes con \\
-        Matcher m = p.matcher("...");
+       Pattern p = Pattern.compile("i{3}"); // pero ojo, que tienen q ser tres veces consecutivas, por eso no va a funcionar en esta frase: "la miel es muy rica y nutritiva"
+        Matcher m = p.matcher("triii"); //
         System.out.println(m.matches());//returns true
         m = p.matcher("....");
         System.out.println(m.matches());//returns false
-
-
-
-        //Ocurrencia de exactas tres veces para caracteres
-        System.out.println("DOS----------------------");
-        Pattern p2 = Pattern.compile("i{3}");
-        Matcher m2 = p2.matcher("iii");
-        System.out.println(m2.matches());//returns true
-        m2 = p2.matcher("iiii");
-        System.out.println(m2.matches());//returns false
 
 
 

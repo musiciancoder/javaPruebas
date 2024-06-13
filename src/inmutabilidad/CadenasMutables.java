@@ -1,7 +1,7 @@
 package inmutabilidad;
 
 //StringBuffer and StringBuilder are mutable classes. StringBuffer is thread-safe and synchronized whereas StringBuilder is not. That's why StringBuilder is faster than StringBuffer. String concatenation operator (+) internally uses StringBuffer or StringBuilder class.
-public class ConstructorCadenasMutables {
+public class CadenasMutables {
     public static void main(String[] args) {
         //Both references x and y target different objects in memory from the beginning
         //If we were to create String x= new String("first value");String y= new String("second value"); they would target the same value in memory!!!

@@ -15,7 +15,8 @@ public class Main {
             emp2.setName("Claudio");
             System.out.println("Emp1: " + emp1.toString() + " ; hashcode: " + emp1.hashCode()); //notar q a pesar que cambiamos el nombre del segundo empleado, el primero se mantiene inmutabla
             System.out.println("Emp2: " + emp2.toString() + " ; hashcode: " + emp2.hashCode());
-
+            System.out.println("Emp1: " + emp1 );
+            System.out.println("Emp2:" + emp2);
 
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();

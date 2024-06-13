@@ -1,0 +1,8 @@
+-Make sure that your singleton are not carrying a lot of mutable global states.
+-La clase java.lang.Runtime es un ejemplo de singleton
+-Singleton instance is created without any arguments from client code (unlike say Factory pattern, thad does allow  parametrization)
+-Singleton is considered an anti-pattern because if it carries around a large mutable global state it is not recommended (esto no lo caché)!
+-Hard to test in unit tests.
+-There are actually very few situations where Singleton is a good choice for the classes we are creating.
+These includes application values. Typically these are read from file at start and then reffered to by other parts of application-
+Logging frameworks however make use of singleton pattern, and most importatly, Spring Framework treats all beans by default as singleton.
