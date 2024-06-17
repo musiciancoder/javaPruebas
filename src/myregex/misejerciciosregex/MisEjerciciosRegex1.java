@@ -1,4 +1,4 @@
-package myregex;
+package myregex.misejerciciosregex;
 
 import java.util.*;
 

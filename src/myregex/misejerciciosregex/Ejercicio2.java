@@ -1,7 +1,5 @@
-package myregex;
+package myregex.misejerciciosregex;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.Scanner;
 
 class Ejercicio2 {

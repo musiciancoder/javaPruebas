@@ -3,11 +3,15 @@ package myregex;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Quantifiers {
+public class GreedyQuantifiers {
     public static void main(String[] args) {
 
-    //Para devolver un booleano si hay un numero determinado de ocurrencias y este numero debe ser conocido de antemano
+    //Para devolver un booleano si hay un numero determinado de ocurrencias y este numero debe ser conocido de antemano.
+     // Ojo, que los caracteres (las "i") tienen que ser consecutivos, por lo q no funcionan con cosas como "Mi niña bonita"
 
+     //GREEDY QUANTIFIERS  --> por defecto todos los quantifiers son GREEDY
+
+     System.out.println("GREEDY QUANTIFIERS");
 
        //Ocurrencia de exactas tres veces seguidas para caracteres
         System.out.println("UNO----------------------");
