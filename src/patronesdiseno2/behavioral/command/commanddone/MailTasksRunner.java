@@ -16,6 +16,7 @@ public class MailTasksRunner implements Runnable {
 	private static final MailTasksRunner RUNNER = new MailTasksRunner();
 
 	public static final MailTasksRunner getInstance() {
+
 		return RUNNER;
 	}
 

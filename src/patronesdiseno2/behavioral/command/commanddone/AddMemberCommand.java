@@ -9,7 +9,7 @@ public class AddMemberCommand implements Command{
 	
 	private EWSService receiver;
 	
-	public AddMemberCommand(String email, String listName, EWSService service) {
+	public AddMemberCommand(String email, String listName, EWSService service) { //el receiver es opcional, pero parametros como email o listName no son opcionales, deben ir para poderselos pasar a execute()
 		this.emailAddress = email;
 		this.listName = listName;
 		this.receiver = service;

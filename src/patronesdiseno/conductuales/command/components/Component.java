@@ -31,7 +31,7 @@ import patronesdiseno.conductuales.command.commands.Command;
 
 public abstract class Component {
 
-    private Command command;
+    private Command command; //notar que el invoker siempre tiene una variable del Command
 
     public void setCommand(Command command) {
         this.command = command;

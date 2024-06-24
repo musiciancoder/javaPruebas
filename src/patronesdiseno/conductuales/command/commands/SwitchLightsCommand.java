@@ -33,7 +33,7 @@ import patronesdiseno.conductuales.command.components.Light;
 //This pattern turns a specific method call into a stand-alone object (yo creo q por stand-alone object se refiere a los objetos de esta clase)
 
 
-public record SwitchLightsCommand(Light light) implements Command {
+public record SwitchLightsCommand(Light light) implements Command { //Notar que el ConcreteCommand (SwitchLightsCommand) contiene siempre una variable del Receiver (Light) como atributo de clase
 
     @Override
     public void execute() {
