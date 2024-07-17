@@ -9,11 +9,13 @@ public class MyTreeMap {
     public static void main(String[] args) {
 
         Map <String,String> personas = new TreeMap<>();
+        personas.put("Zelma","Bouvier");
         personas.put("Andres","Diaz"); //lo agrega, pero luego lo saca, ya q si tiene jkeys repetidos se queda siempre con el ultimo
         personas.put("Andres","Weldt");
         personas.put("Claudio","Diaz");
+        personas.put("Nulo",null); //TreeMap doesn’t allow a null key but may contain many null values.
 
-        System.out.println(personas);
+        System.out.println(personas); //{Andres=Weldt, Claudio=Diaz, Nulo=null, Zelma=Bouvier} devuelve ordenado por orden alfabetico de keys
 
 
         TreeMap <String,String> personas2 = new TreeMap<>();

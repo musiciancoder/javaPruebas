@@ -1,0 +1,3 @@
+AbstractMap es una clase abstracta que hereda directamente de la interfaz Map. Todas las demas clases (HashMap, TreeMap, etc) heredan de esta interfaz, por lo que normalmente si
+queremos tener un hashtable por ejemplo lo instanciaremos por polimorfismo con Map o con AbstractMap.
+Ver https://www.geeksforgeeks.org/abstractmap-in-java/

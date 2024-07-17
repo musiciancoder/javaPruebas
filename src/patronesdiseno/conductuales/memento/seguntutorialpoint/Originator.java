@@ -1,6 +1,7 @@
 package patronesdiseno.conductuales.memento.seguntutorialpoint;
 
 public class Originator {
+
     private String state;
 
     public void setState(String state){

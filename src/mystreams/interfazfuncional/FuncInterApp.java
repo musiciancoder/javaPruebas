@@ -14,6 +14,12 @@ public class FuncInterApp { //notar que para q una Functional Interface funcione
         return opDos.calcularDos(x,y);
     }
 
+    public String prueba (String a, String b){
+     //   ClaseDePrueba cp = (str1,str2)->str1+str2; //NO SE PUEDE PORQUE ClaseDePrueba no es interfaz funcional
+       // return cp.concatenar(a, b);
+        return null;
+    }
+
 
 
 

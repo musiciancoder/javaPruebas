@@ -17,6 +17,7 @@ Tutorialpoint no menciona nada acerca de encapsulacion, lo que en cierta forma l
  */
 
 public class MementoPatternDemo {
+
     public static void main(String[] args) {
 
         Originator originator = new Originator();
