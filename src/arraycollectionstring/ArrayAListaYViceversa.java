@@ -8,7 +8,7 @@ public class ArrayAListaYViceversa {
 
 
         String[] miarray = {"cafe","morado"};
-        List<String> lista = new ArrayList<String>(Arrays.asList(miarray)); ////Esto crea una lista mutable.
+        List<String> lista = new LinkedList<String>(Arrays.asList(miarray)); ////Esto crea una lista mutable.
         lista.add("celeste");
         System.out.println(lista);
 

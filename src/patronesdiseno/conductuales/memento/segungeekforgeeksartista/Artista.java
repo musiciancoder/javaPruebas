@@ -1,7 +1,6 @@
 package patronesdiseno.conductuales.memento.segungeekforgeeksartista;
 
-import patronesdiseno.conductuales.memento.segungeekforgeeks.DocumentMemento;
-import patronesdiseno.conductuales.memento.seguntutorialpoint.Memento;
+
 
 public class Artista { //Originator
 

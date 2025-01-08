@@ -1,9 +1,9 @@
 package patronesdiseno.estructurales.proxy;
 
-import patronesdiseno.estructurales.proxy.example.internet.Internet;
-import patronesdiseno.estructurales.proxy.example.internet.ProxyInternet;
-import patronesdiseno.estructurales.proxy.example.video.ProxyVideoDownloader;
-import patronesdiseno.estructurales.proxy.example.video.VideoDownloader;
+import patronesdiseno.estructurales.proxy.gringopelaoyoutube.internet.Internet;
+import patronesdiseno.estructurales.proxy.gringopelaoyoutube.internet.ProxyInternet;
+import patronesdiseno.estructurales.proxy.gringopelaoyoutube.video.ProxyVideoDownloader;
+import patronesdiseno.estructurales.proxy.gringopelaoyoutube.video.VideoDownloader;
 
 
 /*El patron proxy permite tener mayor control sobre el objeto de una clase, al realizar alguna accion antes o despues que la petición alcance ese objeto, de la misma forma que un dispositivo como gateway o un proxy server actuarían para realizar alguna accion antes o despues de que una peticion (http normalmente) llegue a nuestra maquina

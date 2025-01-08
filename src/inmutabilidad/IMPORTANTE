@@ -1,0 +1,82 @@
+Notar q todas las clases de este paquete se basan en el concepto errado de que hashcode es siempre una buena forma de medir inmutabilidad,
+sin embargo esto solo es cierto en el caso
+
+is hashcode a good mesurement for immutability ob two objects
+No, the hash code is not a reliable measurement for determining the immutability of two objects. While immutability ensures that an object’s state does not change, the hash code itself is simply a representation of the object’s state at a particular moment in time. Here’s a deeper dive into why hash codes should not be used as a measure of immutability:
+
+Hash Code Overview
+Purpose: A hash code is used for efficient lookup and storage in hash-based collections like HashMap and HashSet.
+
+Calculation: It's derived from the object’s state using the hashCode() method.
+
+Immutability Overview
+Definition: Immutability means that once an object is created, its state cannot be changed.
+
+Design: An immutable class is designed in such a way that all its fields are final and cannot be modified after construction.
+
+Key Differences
+State Representation vs. State Change:
+
+The hash code represents the current state of an object but does not guarantee that the state is unchangeable. Even a mutable object can have a hash code that remains consistent if its state is not modified.
+
+Method Overriding:
+
+The hashCode() method can be overridden to provide custom hash code logic. This does not inherently relate to whether the object is immutable or mutable.
+
+Consistency:
+
+Immutability ensures that the state of an object remains constant, whereas the hash code's purpose is to ensure consistent and efficient object retrieval. A mutable object may still have a consistent hash code if its state does not change during its lifecycle.
+
+Example:
+Consider two classes, one immutable and one mutable:
+
+java
+public final class ImmutableClass {
+    private final int id;
+    private final String name;
+
+    public ImmutableClass(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    @Override
+    public int hashCode() {
+        return id * 31 + (name != null ? name.hashCode() : 0);
+    }
+}
+
+public class MutableClass {
+    private int id;
+    private String name;
+
+    public MutableClass(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public int hashCode() {
+        return id * 31 + (name != null ? name.hashCode() : 0);
+    }
+}
+In this example:
+
+ImmutableClass is immutable, meaning its state cannot be changed after creation.
+
+MutableClass is mutable, meaning its state can be changed using the setName method.
+
+Both classes can have the same hashCode() implementation, but only ImmutableClass is truly immutable.
+
+Summary
+Hash Code: A numerical value used for efficient lookups, not an indicator of immutability.
+
+Immutability: Ensures that an object’s state cannot be changed after it is created.
+
+To determine whether an object is immutable, examine its design and implementation, such as the use of final fields and lack of state-modifying methods, rather than relying on hash codes.
+
+I hope this clarifies the difference! Let me know if you have any more questions or need further details.
